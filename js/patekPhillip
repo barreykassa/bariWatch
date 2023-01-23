@@ -1,0 +1,159 @@
+
+ let product = document.getElementsByClassName("row")[0];
+ for (let i = 0; i < arrayProducts.length; i++) {
+    if (arrayProducts[i].discription ==  "PATEK PHILLIP") {
+      product.innerHTML += `  <div class="col-md-3">
+          <div class="product-top">
+          <img src="${arrayProducts[i].img[0]}" alt="">
+        
+              <div class="overlay">
+                  <button class="btn btn-secondary" title="quick shop" type="button"><i class="fa fa-eye"></i></button>
+                  <button class="btn btn-secondary" title="add i wish list" type="button"><i
+                          class="fa fa-heart-o"></i></button>
+                  <button class="btn btn-secondary" title="add to cart" type="button" onclick = "addToCart(${arrayProducts[i].id})"><i
+                          class="fa fa-shopping-cart"></i></button>
+              </div>
+          </div>
+          <div class="product-bottom text-center">
+              <i class="fa fa-star"></i>
+             <i class="fa fa-star"></i>
+             <i class="fa fa-star"></i>
+             <i class="fa fa-star-half-o"></i>
+             <i class="fa fa-star-o"></i> 
+             <h3>${arrayProducts[i].name}</h3>
+             <h5 class="h5">${arrayProducts[i].price}$</h5>
+            </div>  
+      </div>`
+    }
+  };
+
+
+
+  let heart=document.getElementsByClassName("fa fa-heart-o");
+  let eye=document.getElementsByClassName("fa fa-eye");
+  
+  for(let i=0;i<eye.length;i++){
+    eye[i].onclick=function(){
+      console.log(arrayProducts[i+20]);
+      if(arrayProducts[i+20].discription == "PATEK PHILLIP"){
+        eye[i].innerHTML += `$<img src="${arrayProducts[i+20].img[0]}" style="width:400px;height:400px;position: absolute;z-index:1">`
+      }
+      
+    }
+  
+  }
+  
+  for(let i=0;i<heart.length;i++){
+    heart[i].onclick=function(){
+      if(arrayProducts[i+20].discription == "PATEK PHILLIP"){
+        heart[i].style.color="red"
+        
+      }
+      
+    }
+  
+  }
+
+
+function addToCart(id) {
+  for(let i=0;i<arrayProducts.length;i++){
+    if(arrayProducts[i].id == id){
+      cartProducts.push(arrayProducts[i]);
+      console.log(cartProducts);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+//!!!!!!!!!!!!!!!!!!!!!!!!
+ // const  patekArr=[
+  //   {id:21,name:"ALLENDER",price:5000,discription:"PATEK watch"},
+  //   {id:22,name:"CALANDER",price:10000,discription:"PATEK watch"},
+  //   {id:23,name:"LADIES FIRST",price:15000,discription:"PATEK watch"},
+  //   {id:24,name:" LADIESPERPECTUAL",price:20000,discription:"PATEK watch"},
+  //   {id:25,name:"OYSTER",price:25000,discription:"PATEK watch"},
+  //   {id:26,name:"CHRONOGRAPH",price:30000,discription:"PATEK watch"},
+  //   {id:27,name:"YACHT MASTER",price:35000,discription:"PATEK watch"},
+  //   {id:28,name:"MONOPUSHER",price:40000,discription:"PATEK watch"},
+  //   {id:29,name:"SEA DWELLER",price:45000,discription:"PATEK watch"},
+  //   {id:30,name:" MOON AGE",price:50000,discription:"PATEK watch"},
+  //   {id:31,name:"ALARM TRAVEL",price:55000,discription:"PATEK watch"},
+  //   {id:32,name:"MINUT REPEATER",price:60000,discription:"PATEK watch"},
+  //   {id:33,name:" TOURBILLION",price:65000,discription:"PATEK watch"},
+  //   {id:34,name:"PEARLMASTER",price:70000,discription:"PATEK watch"},
+  //   {id:35,name:"AIR KING",price:75000,discription:"PATEK watch"},
+  //   {id:36,name:"PEARLMASTER DWELLER",price:80000,discription:"PATEK watch"},
+  //   {id:37,name:"CELLIN SKY",price:85000,discription:"PATEK watch"},
+  //   {id:38,name:"PEARLMASTER QUEEN",price:90000,discription:"PATEK watch"},
+  //   {id:39,name:"ROYALS",price:95000,discription:"PATEK watch"},
+  //   {id:40,name:"TOURBILLIN",price:100000,discription:"PATEK watch"},
+  // ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
